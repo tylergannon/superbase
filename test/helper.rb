@@ -7,10 +7,14 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'minitest/unit'
+require 'minitest/spec'
+require 'minitest/autorun'
+require 'minitest/ansi'
+MiniTest::ANSI.use!
 
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+# $LOAD_PATH.unshift('/Users/tyler/src/dev/simple_database', 'lib')
 require 'simple_database'
 
 class MiniTest::Unit::TestCase

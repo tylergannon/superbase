@@ -1,0 +1,5 @@
+require 'simple_database/hax0r_search_tree'
+require 'simple_database/database'
+require 'simple_database/transaction'
+require 'simple_database/commands/set_command'
+require 'simple_database/commands/unset_command'
